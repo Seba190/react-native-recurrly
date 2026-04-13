@@ -21,15 +21,14 @@ export default function App() {
         <SafeAreaView className="flex-1 bg-background p-5">
                 <FlatList
                     ListHeaderComponent={() => <>
-
                         <View className="home-header">
                             <View className= "home-user">
                                 <Image source={images.avatar} className="home-avatar"/>
                                 <Text className="home-user-name">
                                     {HOME_USER.name}
                                 </Text>
-                                <Image source={icons.add} className="home-add-icon"/>
                             </View>
+                            <Image source={icons.add} className="home-add-icon"/>
                         </View>
                         <View className= "home-balance-card">
                             <Text className="home-balance-label">Balance</Text>
@@ -54,7 +53,7 @@ export default function App() {
                                 ListEmptyComponent={<Text className="home-empty-state">No upcoming renewals yet</Text> }
                             />
                         </View>
-                        <ListHeading title="All Subscription"/>
+                        <ListHeading title="All Subscriptions"/>
                     </>
                 }
                     data={HOME_SUBSCRIPTIONS}
